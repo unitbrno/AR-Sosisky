@@ -25,16 +25,15 @@ def index():
 
 @app.route("/tasks.html")
 def opes():
-    return l2
+    return render_template('tasks.html')
 
 @app.route("/warnings.html")
 def oper():
     return render_template('warnings.html', data=['kokos', 'data'])
-"""
+
 @app.route("/both.html")
 def oden():
-    return l4
-    """
+    return render_template('both.html')
 
 
 #@app.route("/warnings.html")
