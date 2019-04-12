@@ -1,23 +1,27 @@
 from flask import Flask
+from flask import render_template
+
 app = Flask(__name__)
 
 
-with open('index.html', 'r') as f:
-    l1 = head
+"""
+with open('index.html', 'w') as f:
+    l1 = f.read()
 
-with open('tasks.html', 'r') as f:
+with open('tasks.html', 'w') as f:
     l2 = f.read()
 
-with open('warnings.html', 'r') as f:
+with open('warnings.html', 'w') as f:
     l3 = f.read()
 
-with open('both.html', 'r') as f:
+with open('both.html', 'w') as f:
     l4 = f.read()
-
+"""
 
 @app.route("/index.html")
 def index():
-    return l1
+    return render_template('index.html')
+
 
 @app.route("/tasks.html")
 def opes():
@@ -25,11 +29,12 @@ def opes():
 
 @app.route("/warnings.html")
 def oper():
-    return l3
-
+    return render_template('warnings.html', data=['kokos', 'data'])
+"""
 @app.route("/both.html")
 def oden():
     return l4
+    """
 
 
 #@app.route("/warnings.html")

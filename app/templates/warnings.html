@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR-Sosiski</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    
+    <a-scene>
+      <a-entity camera look-controls>
+      
+        <a-plane position="-1.25 0.5 -4" rotation="0 0 0" width="2" height="3" color="red">
+		  {% for datan in data %}
+			  <a-text value={{ datan }} color="#111111" position="0 1.2 0" align="center"  wrap-count="60"></a-text>
+		  {% endfor %}
+              <a-text value="some" color="#111111" position="0 0.8 0" align="center"  wrap-count="60"></a-text> 
+              <a-text value="MOTOR overheat!" color="#111111" position="0 0.4 0" align="center"  wrap-count="60"></a-text>          
+      </a-plane>
+      
+   </a-entity>     
+      <a-sky color="#000000"></a-sky>
+    </a-scene>
+  </body>
+</html>
