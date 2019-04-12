@@ -1,6 +1,17 @@
 from flask import Flask
 app = Flask(__name__)
 
+
+head = """
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR-Sosiski</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+"""
+
 with open('index.html', 'r') as f:
     l1 = f.read()
 
